@@ -1,0 +1,57 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Create
+                    <a routerLink="/employee" class="btn btn-primary float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <div *ngIf="isLoading; else elseForm">
+                    <app-loader :title="loadingTitle"></app-loader>
+                </div>
+                <ng-template #elseForm>
+                
+                <form [formGroup]="employeeForm" (ngSubmit)="createemployee()">
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" formControlName="name" class="form-control" />
+                        <div *ngIf="employeeForm.get('name')?.hasError('required') && employeeForm.get('name')?.touched"
+                            class="text-danger">
+                            Name is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Position</label>
+                        <input type="text" formControlName="position" class="form-control" />
+                        <div *ngIf="employeeForm.get('position')?.hasError('required') && employeeForm.get('position')?.touched"
+                            class="text-danger">
+                            Position is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Hiring Date</label>
+                        <input type="text" formControlName="hiringDate" class="form-control" bsDatepicker id="datetimePicker"/>
+                        <div *ngIf="employeeForm.get('hiringDate')?.hasError('required') && employeeForm.get('hiringDate')?.touched"
+                            class="text-danger">
+                            Hiring Date is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Salary</label>
+                        <input type="text" formControlName="salary" class="form-control" />
+                        
+                        <div *ngIf="(employeeForm.get('salary')?.hasError('required') || employeeForm.get('salary')?.hasError('invalidInteg')) && employeeForm.get('salary')?.touched"
+                            class="text-danger">
+                            Salary must be a valid number.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

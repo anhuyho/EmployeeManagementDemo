@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h4>Employee
+                <a routerLink="/employee/create" class="btn btn-primary float-end">Create</a>
+            </h4>
+        </div>
+        <div class="card-body">
+
+            <div *ngIf="isLoading; else elseTableBlock">
+                <app-loader :title="loadingTitle"></app-loader>
+            </div>
+            <ng-template #elseTableBlock>
+                <table class="table tabl-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Hiring Date</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of this.employee">
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.position}}</td>
+                            <td>{{item.hiringDate | date: 'yyyy-MM-dd'}}</td>
+                            <td>{{item.salary | currency}}</td>
+                            <td><a routerLink="/employee/{{item.id}}" class="btn btn-success mx-2">Edit</a></td>
+                            <td><button type="button" class="btn btn-danger" (click)="deleteemployee(item.id)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ng-template>
+        </div>
+    </div>
+    
+</div>

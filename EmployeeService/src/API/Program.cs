@@ -44,7 +44,10 @@ public class Program
             loggingBuilder.ClearProviders();
             loggingBuilder.AddSerilog();
         });
-
+        builder.Services.AddCors(p => p.AddPolicy("employeeAngular", builder =>
+    {
+        builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+    }));
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -55,7 +58,7 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-
+        app.UseCors("employeeAngular");
         app.UseAuthorization();
 
         app.MapControllers();
