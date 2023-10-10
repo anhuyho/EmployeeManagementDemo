@@ -76,8 +76,6 @@ public class JsonEmployeeRepository : IEmployeeRepository
         }
     }
 
-
-
     private void ReadEmployeesFromFile()
     {
         var cacheKey = $"jsonEmployees";
