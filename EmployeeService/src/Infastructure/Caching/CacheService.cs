@@ -19,7 +19,7 @@ public class CacheService : ICacheService
             result = await createItem();
             var cacheEntryOptions = new MemoryCacheEntryOptions
             {
-                AbsoluteExpirationRelativeToNow = timeSpan ?? TimeSpan.FromMinutes(_cacheOptions.ExpireMinute)
+                AbsoluteExpirationRelativeToNow = timeSpan ?? TimeSpan.FromSeconds(_cacheOptions.ExpireSecond)
             };
 
             _memoryCache.Set(cacheKey, result, cacheEntryOptions);

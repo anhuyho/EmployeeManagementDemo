@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: '', component: EmployeeListComponent, title: 'Home page' },
   { path: 'employee', component: EmployeeListComponent, title: 'employee' },
   { path: 'employee/create', component: employeeCreateComponent, title: 'Create employee' },
-  { path: 'employee/:id', component: employeeEditComponent, title: 'Edit employee' }
-  
+  { path: 'employee/:id', component: employeeEditComponent, title: 'Edit employee' },
+  { path: '**', component: EmployeeListComponent, title: 'Employee' }
   
 ];
 

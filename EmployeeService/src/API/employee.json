@@ -1,23 +1,16 @@
 [
   {
-    "Name": "Hai",
+    "Name": "Nguy\u1EC5n Th\u1ECB H",
     "Position": "CEO",
-    "HiringDate": "2023-10-08T22:34:06.8203953Z",
-    "Salary": 12.0,
+    "HiringDate": "2023-10-11T18:41:57.7848834Z",
+    "Salary": 125,
     "Id": "b334ba8a-ddd4-4e31-b560-c2f2df4c1d78"
   },
   {
     "Name": "Huy",
     "Position": "CTO",
-    "HiringDate": "2023-10-08T22:34:06.8203953Z",
-    "Salary": 12.0,
+    "HiringDate": "2023-10-11T18:16:24.427849Z",
+    "Salary": 345,
     "Id": "8c42d2b1-a17d-47b7-b731-da4627fd8232"
-  },
-  {
-    "Name": "Huy",
-    "Position": "CTO",
-    "HiringDate": "2023-10-08T22:34:06.8203953Z",
-    "Salary": 12.0,
-    "Id": "cac05b0b-0553-4fdc-a29c-b182ce0d2fbe"
   }
 ]

@@ -6,5 +6,5 @@ public class RepositoryOptions
 }
 public class CacheOptions
 {
-    public int ExpireMinute { get; set; }
+    public int ExpireSecond { get; set; }
 }
