@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from './auth.service';
-
+import { environment } from '../../environments/environment';
 
 export interface Employee{
   id: string
@@ -15,8 +15,8 @@ export interface Employee{
   
 export class EmployeeService {
 
-  private apiUrl = 'https://localhost:7089/api/employees';
-
+  //private apiUrl = 'https://localhost:7089/api/employees';
+  private apiUrl = environment.apiUrl;
   constructor(private httpClient: HttpClient) { }
   
   
