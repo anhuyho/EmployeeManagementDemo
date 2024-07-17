@@ -1,6 +1,6 @@
 # Employee Management System
 
-This repository contains a complete solution for managing employees, consisting of a .Net Core API (EmployeeService), a .Net Core hosted service (HostedService), and an Angular frontend application. This system allows you to perform various operations on employee data, such as creating, updating, deleting, and viewing employee details.
+This repository contains a complete solution for managing employees: a .Net Core API (EmployeeService), a .Net Core hosted service (HostedService), and an Angular frontend application. This system allows you to perform various operations on employee data, such as creating, updating, deleting, and viewing employee details.
 
 ## Backend
 
@@ -12,7 +12,7 @@ Employee Service is a .Net Core API that handles employee management. It follows
 #### Features
 
 - **Employee Data**:
-  - Employees are identified by an `id` and have attributes including `name`, `position`, `hiring date`, and `salary`.
+  - Employees are identified by an `id` and have attributes including `name,` `position,` `hiring date,` and `salary.`
   
 - **Endpoints**:
   - The API provides the following endpoints:
@@ -23,28 +23,28 @@ Employee Service is a .Net Core API that handles employee management. It follows
     - `DELETE /employee/{id}`: Delete an employee by their ID.
     
 - **Design Principles**:
-  - Use Clean Architecure
-  - Apply CQRS pattern using MediatR
+  - Use Clean Architecture
+  - Apply the CQRS pattern using MediatR
   - Follow Domain-Driven Design (DDD)
-  - Apply SOLID, KISS, YAGNI principles for clean and maintainable code.
+  - Apply SOLID, KISS, and YAGNI principles for clean and maintainable code.
   
 - **Data Storage**:
   - Employee data is stored in a JSON file.
   
 - **Caching**:
-  - Use .NET InMemmory Cache, apply DI to be able to replace by other Cache like Redis, ...
+  - Use .NET InMemmory Cache and apply DI to replace it with another Cache like Redis.
   
 - **Logging**:
-  - User Serilog to log console and file, be able to extend to write to other platform like DataDog, ...
+  - Use Serilog to log console and file, and be able to extend it to write on other platforms like DataDog.
   
 - **Dependency Injection**:
-  - Apply for Services, Repositories, ... be able to replace, change the implementaion or technical easily
+  - Apply for Services and repositories, ... be able to replace, change the implementation or technical easily
   
 - **Configuration**:
   - Configuration options, such as the file path of the employee repository, are abstracted using configuration settings.
   
 - **Unit Tests**:
-  - Use xUnit to write Unit Test (for Business (Application and Domain layers)) and Integration Test (for API, ...)
+  - Use xUnit to write the Unit Test (for Business (Application and Domain layers)) and Integration Test (for API, etc.).
 
 ### Report Service - Employee Reporting Service
 
